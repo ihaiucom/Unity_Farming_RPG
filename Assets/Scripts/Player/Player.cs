@@ -31,7 +31,7 @@ public class Player : SingletonMonoBehaviour<Player>
 	private bool idleLeft;
 	private bool idleRight;
 
-	private Rigidbody2D rigidbody2D;
+	private Rigidbody2D rigidbody2d;
 	private Direction playerDirection;
 	private float movementSpeed;
 	private bool _playerInputIsDisabled = false;
@@ -41,7 +41,7 @@ public class Player : SingletonMonoBehaviour<Player>
 	{
 		base.Awake();
 
-		rigidbody2D = GetComponent<Rigidbody2D>();
+		rigidbody2d = GetComponent<Rigidbody2D>();
 	}
 
 	private void Update()
@@ -74,7 +74,7 @@ public class Player : SingletonMonoBehaviour<Player>
 	{
 		Vector2 move = new Vector2(xInput * movementSpeed * Time.deltaTime, yInput * movementSpeed * Time.deltaTime);
 
-		rigidbody2D.MovePosition(rigidbody2D.position + move);
+		rigidbody2d.MovePosition(rigidbody2d.position + move);
 	}
 
 	private void PlayerWalkingInput()
